@@ -8,8 +8,8 @@ const {
   EmbedBuilder
 } = require("discord.js");
 
-const TOKEN = "حط_توكن_البوت_هنا";
-const CLIENT_ID = "حط_Application_ID_هنا";
+const TOKEN = process.env.TOKEN;
+const CLIENT_ID = process.env.CLIENT_ID;
 
 const client = new Client({
   intents: [
