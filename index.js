@@ -1083,27 +1083,29 @@ client.on("interactionCreate", async interaction => {
       );
     }
 
-  } catch (error) {
+ } catch (error) {
+  console.error("حدث خطأ:", error);
 
-    console.error(error);
-
-    if (interaction.replied || interaction.deferred) {
-      return interaction.followUp({
+  // إذا تم الرد على الأمر مسبقًا، لا نحاول الرد مرة ثانية
+  if (interaction.replied || interaction.deferred) {
+    try {
+      await interaction.followUp({
         content: "❌ حدث خطأ أثناء تنفيذ الأمر.",
         ephemeral: true
       });
+    } catch (err) {
+      console.error("تعذر إرسال رسالة الخطأ:", err);
     }
+    return;
+  }
 
-    return interaction.reply({
+  // إذا لم يتم الرد بعد
+  try {
+    await interaction.reply({
       content: "❌ حدث خطأ أثناء تنفيذ الأمر.",
       ephemeral: true
     });
+  } catch (err) {
+    console.error("تعذر الرد على الأمر:", err);
   }
-
-});
-
-// =========================
-// تسجيل الدخول
-// =========================
-
-client.login(TOKEN);
+}
