@@ -10,8 +10,8 @@ const {
   EmbedBuilder
 } = require("discord.js");
 
-const TOKEN = MTU0MDExMDU3ODAwODMzNDMzNg.GuX8TQ.rt0jj0_O4b_SuCBB532QdFEBVj58KZiRM9dbZ0
-const CLIENT_ID = 1540110578008334336
+const TOKEN = "MTU0MDExMDU3ODAwODMzNDMzNg.GuX8TQ.rt0jj0_O4b_SuCBB532QdFEBVj58KZiRM9dbZ0";
+const CLIENT_ID = "1540110578008334336";
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
