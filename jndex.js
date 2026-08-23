@@ -10,7 +10,7 @@ const {
   EmbedBuilder
 } = require("discord.js");
 
-const TOKEN = "MTU0MDExMDU3ODAwODMzNDMzNg.G-_31X.W0TTrcqNEDiuhG0dkxR8UnyLB-aIvssXDVp6I0";
+const TOKEN ="MTU0MDExMDU3ODAwODMzNDMzNg.G-_31X.W0TTrcqNEDiuhG0dkxR8UnyLB-aIvssXDVp6I0";
 const CLIENT_ID = "1540110578008334336";
 const client = new Client({
   intents: [
