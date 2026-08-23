@@ -1,9 +1,9 @@
 {
   "name": "blor-bot",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "jndex.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node jndex.js"
   },
   "dependencies": {
     "discord.js": "^14.22.1"
